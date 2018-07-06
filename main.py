@@ -14,8 +14,14 @@
 
 import numpy as np
 import lobulo
-import movilidad
-import parametros
+import Iteracion as It
+import parametros as pa
 
-for x in [-1, 0, 1]:
-    print(lobulo.lobuloEliptico(x))
+
+def simulacion():
+    iteracion = It.Iteracion()
+    for x in range(0, pa.NumeroCorridas):
+        iteracion.corrida()
+
+
+simulacion()
